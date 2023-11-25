@@ -1,10 +1,10 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700,800|Open+Sans:400,700|Lato:400,700,800");
 :root {
-  --rojo: #fd8b1a;
+  --naranja: #fd661a;
   --gris-oscuro: #2a2d31;
   --gris-claro: #ebebeb;
-  --azul: #205ea1 ;
+  --azul: rgb(28, 144, 198);
 }
 
 /* Definir las fuentes */
@@ -41,8 +41,9 @@ p {
   z-index: 1000; /* Asegura que esté por encima del contenido */
 }
 
-.sticky-nav .logo a img {
-  width: 150px;
+.logo img {
+  border-radius: 20%;
+  width: 130px;
 }
 
 .sticky-nav .menu {
@@ -51,36 +52,6 @@ p {
   margin: 0;
   align-items: center;
   padding: 10px;
-}
-
-.menu-icon {
-  font-size: 24px;
-  cursor: pointer;
-  display: none;
-}
-
-#menu-toggle {
-  display: none;
-}
-
-.sticky-nav .menu li {
-  margin-right: 20px;
-}
-
-.sticky-nav .menu a {
-  text-decoration: none;
-  color: var(--rojo);
-  font-weight: bold;
-}
-
-.sticky-nav .boton-entrada {
-  background-color: #fff;
-  color: var(--gris-claro);
-  padding: 10px 20px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  margin-right: 40px;
 }
 
 /* Estilos generales */
@@ -95,7 +66,7 @@ header {
   color: #fff;
   text-align: center;
   padding: 20px;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 h1 {
@@ -134,7 +105,7 @@ section {
   align-items: center;
 }
 #redes-sociales .icons a {
-  color: var(--rojo);
+  color: var(--naranja);
   margin: 10px;
 }
 
@@ -159,6 +130,18 @@ section {
   margin: 0 auto;
 }
 
+.subtitulo {
+  color: white;
+}
+
+h2 {
+  color: var(--azul);
+}
+
+.faq h3 {
+  color: var(--naranja);
+}
+
 .oferta, .siguenos {
   text-align: center;
 }
@@ -181,7 +164,7 @@ h2 {
   width: 150px;
   padding: 10px 20px;
   font-size: 18px;
-  background-color: var(--rojo);
+  background-color: var(--naranja);
   color: var(--gris-oscuro);
   font-weight: bold;
   text-align: center;
@@ -195,7 +178,7 @@ h2 {
 }
 
 .contactar:hover {
-  background-color: var(--rojo);
+  background-color: var(--naranja);
 }
 
 a {
@@ -222,6 +205,6 @@ a {
     display: block; /* Muestra el ícono de hamburguesa en dispositivos móviles */
     font-size: 24px;
     cursor: pointer;
-    color: var(--rojo);
+    color: var(--naranja);
   }
 }/*# sourceMappingURL=style.css.map */
