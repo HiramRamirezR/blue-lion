@@ -16,76 +16,74 @@
   </nav>
 
     <header>
-        <h1>Aprende inglés con Blue Lion</h1>
-        <h2 class="subtitulo">La escuela en línea líder en enseñanza de inglés.</h2>
+        <h1>¡Genial!</h1>
+        <h2 class="subtitulo">Estás muy cerca de hablar inglés.</h2>
     </header>
 
     <!-- <a class="contactar" href="https://api.whatsapp.com/send?phone=+522213456836&text=Hola, quiero solicitar 1 semana de prueba gratis." target="_blank"><i class="fa-brands fa-whatsapp"></i> Contactar</a> -->
-    <div class="oferta">
-      <h3>Tenemos 4 obsequios disponibles para ti. <i class="fa-solid fa-arrow-down"></i> </h3>
-      <a class="contactar anim" href="obsequios.html">Elegir obsequios</a>
-    </div>
-
-    <section id="imagen">
-        <img src="https://images.pexels.com/photos/4144222/pexels-photo-4144222.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-    </section>
-
-    <section class="testimonios">
-      <div class="testimonial">
-          <p>"Gracias a Blue Lion, logré hablar inglés con confianza. Las clases son realmente efectivas y divertidas. ¡Lo recomiendo!"</p>
-          <p class="nombre">Ana Pérez, Estudiante</p>
-      </div>
-    </section>
-
-    <section id="beneficios">
-      <h2>Clases de inglés desde casa</h2>
-      <p>
-        En Blue Lion, puedes aprender inglés desde la comodidad de tu hogar. Nuestras clases en línea por Zoom te permiten estudiar a tu propio ritmo y horarios.
-      </p>
-    </section>
-
-    <section id="programa">
-      <h2>Profesores altamente capacitados</h2>
-      <p>Nuestros profesores son bilingües y utilizan métodos dinámicos para que practiques inglés de manera efectiva.</p>
-    </section>
-
-    <section id="recursos">
-      <h2>Recursos y materiales</h2>
-      <p>En Blue Lion, tendrás acceso a una gran variedad de recursos didácticos, ejercicios y actividades prácticas. Te ayudaremos a alcanzar tus objetivos rápidamente.</p>
-    </section>
-
-    <section id="clases">
-      <h2>Todas las clases que quieras a la semana.</h2>
-      <p>¿No pudiste llegar a clase? No te preocupes, puedes entrar en otro horario. Hasta puedes tomar varias clases al día.</p>
-    </section>
-
-    <section class="testimonios">
-      <div class="testimonial">
-          <p>"Excelentes profesores y un ambiente de aprendizaje amigable. Blue Lion es la mejor opción para mejorar tu inglés."</p>
-          <p class="nombre">Carlos Rodríguez, Estudiante</p>
-      </div>
-    </section>
 
     <section id="faq">
-      <h2>Preguntas Frecuentes</h2>
+      <h2>Sólo falta un paso</h2>
       <div class="faq">
-          <h3>¿Cuáles son los requisitos para comenzar?</h3>
-          <p>Comienza en cualquier momento. No necesitas conocimientos previos.</p>
+          <h3>Elige 3 de los 4 obsequios que tenemos disponibles.</h3>
+          <!-- checkbox -->
+          <input type="checkbox" id="1">
+          <label for="1">Obsequio 1</label>
+          <div class="content">
+            <p>* Acceso a una semana de clases en vivo sin costo.</p>
+          </div>
+          <input type="checkbox" id="2">
+          <label for="2">Obsequio 2</label>
+          <div class="content">
+            <p>* Descuento de 50% en la primera mensualidad.</p>
+          </div>
+          <input type="checkbox" id="3">
+          <label for="3">Obsequio 3</label>
+          <div class="content">
+            <p>* E-book gratuito de las 100 frases más usadas en inglés.</p>
+          </div>
+          <input type="checkbox" id="4">
+          <label for="4">Obsequio 4</label>
+          <div class="content">
+            <p>* Sesión de tutoría personalizada de 30 minutos para evaluar el nivel de inglés.</p>
+          </div>
       </div>
-      <div class="faq">
-        <h3>¿Hay alguna promoción o descuento?</h3>
-        <p>Siempre tenemos promociones. Checa en los obsequios.</p>
-      </div>
-      <div class="faq">
-        <h3>¿Cómo es el método de aprendizaje?</h3>
-        <p>99% conversacional. 1% de gramática. Estamos enfocados en que hables y entiendas inglés.</p>
-      </div>
+      
     </section>
 
     <div class="oferta">
-      <h3>Tenemos 4 obsequios disponibles para ti. <i class="fa-solid fa-arrow-down"></i> </h3>
-      <a class="contactar anim" href="obsequios.html">Elegir obsequios</a>
+      <h3>Obtén tus obsequios. <i class="fa-solid fa-arrow-down"></i> </h3>
+      <a class="contactar anim" href=""><i class="fa-solid fa-gift"> <i class="fa-solid fa-gifts"></i></i></a>
     </div>
+
+    <script>
+  // Get the checkboxes
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+  // Create a function to update the link
+  function updateLink() {
+      // Get the selected checkboxes
+      const selectedCheckboxes = Array.from(checkboxes).filter(checkbox => checkbox.checked);
+      
+      // Create the message based on the selected checkboxes
+      const message = selectedCheckboxes.map(checkbox => {
+          return `Quiero solicitar: ${checkbox.labels[0].textContent}.`;
+      }).join('\n');
+      
+      // Update the link
+      const link = document.querySelector('.contactar');
+      link.href = `https://api.whatsapp.com/send?phone=+522213456836&text=${encodeURIComponent(message)}`;
+  }
+
+  // Add event listeners to the checkboxes
+  checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', updateLink);
+  });
+</script>
+
+<section id="imagen">
+  <img src="https://images.pexels.com/photos/264787/pexels-photo-264787.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+</section>
 
     <section id="redes-sociales">
       <h2 class="siguenos">Síguenos en Redes Sociales</h2>
